@@ -1,0 +1,21 @@
+﻿@model ICollection<Comment>
+
+@if (Model != null && Model.Any())
+{
+   
+    <div>
+        <h4 class="mb-3">Comments</h4>
+        <div class="list-group">
+            @foreach (var comment in Model)
+            {
+                <div class="list-group-item card-img-bottom">
+                    <p class="mb-1">@comment.CommentText</p>
+                </div>
+            }          
+        </div>
+    </div>
+}
+else
+{
+    <p><strong>Has no comments</strong></p>
+}

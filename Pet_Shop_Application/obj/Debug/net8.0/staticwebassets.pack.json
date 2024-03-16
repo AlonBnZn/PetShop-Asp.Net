@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Animals\\Bird-Eagle.jpg",
+      "PackagePath": "staticwebassets\\images\\Animals\\Bird-Eagle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Animals\\Fish-Koi.jpg",
+      "PackagePath": "staticwebassets\\images\\Animals\\Fish-Koi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Animals\\Mammal-Cat.jpg",
+      "PackagePath": "staticwebassets\\images\\Animals\\Mammal-Cat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Animals\\Mammal-Dog-bernese.jpg",
+      "PackagePath": "staticwebassets\\images\\Animals\\Mammal-Dog-bernese.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Animals\\Reptil-Chameleon.jpg",
+      "PackagePath": "staticwebassets\\images\\Animals\\Reptil-Chameleon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Icon.jpg",
+      "PackagePath": "staticwebassets\\images\\Icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Instagram.png",
+      "PackagePath": "staticwebassets\\images\\Instagram.png"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\images\\Linkedin.png",
+      "PackagePath": "staticwebassets\\images\\Linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\scripts\\Validation.js",
+      "PackagePath": "staticwebassets\\scripts\\Validation.js"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\scripts\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\scripts\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\scripts\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\scripts\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\scripts\\jquery.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\scripts\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\scripts\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\styles\\Style.css",
+      "PackagePath": "staticwebassets\\styles\\Style.css"
+    },
+    {
+      "Id": "C:\\Users\\AlonB\\OneDrive\\Desktop\\ASP.NET\\Project\\Pet_Shop_Application\\Pet_Shop_Application\\wwwroot\\styles\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\styles\\bootstrap.min.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Pet_Shop_Application.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Pet_Shop_Application.props",
+      "PackagePath": "build\\Pet_Shop_Application.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Pet_Shop_Application.props",
+      "PackagePath": "buildMultiTargeting\\Pet_Shop_Application.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Pet_Shop_Application.props",
+      "PackagePath": "buildTransitive\\Pet_Shop_Application.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

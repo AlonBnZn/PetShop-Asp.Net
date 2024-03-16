@@ -1,0 +1,12 @@
+﻿<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle m-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Categories
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" asp-route-categoryid="0">All</a></li>
+        @foreach (var category in Model.GetCategories())
+        {
+         <li><a class="dropdown-item"  asp-route-categoryid="@category.CategoryId">@category.Name</a></li>
+        }
+    </ul>
+</div>

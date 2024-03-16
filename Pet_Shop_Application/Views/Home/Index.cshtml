@@ -1,0 +1,24 @@
+﻿@model Pet_Shop_Application.Services.IPetShopRepository;
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 class="text-center">HomePage</h1>
+<div class="row m-0 AnimalCards">
+    @{
+        foreach (Animal animal in ViewBag.MostRated)
+        {
+            <div class="card col-md-4 p-0 AnimalCard">
+                <img src="~/images/Animals/@animal.PictureName" class="card-img-top ImgCard" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">@animal.Name</h5>
+                    <p class="card-text">@animal.Description</p>
+                    <p><strong>Number of Comments: @animal.Comments!.Count</strong></p>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="AnimalPage" asp-route-id="@animal.AnimalId" class="btn btn-primary align-bottom">Details</a>
+                </div>
+            </div>
+        }
+    }
+</div>

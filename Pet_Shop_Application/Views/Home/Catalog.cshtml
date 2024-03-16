@@ -1,0 +1,42 @@
+﻿@model Pet_Shop_Application.Services.IPetShopRepository;
+@{
+    ViewBag.Title = "Catalog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<h1 class="text-center">@ViewBag.Category Table</h1>
+<div class="text-center">
+    @await Html.PartialAsync("_CategoriesPartialView")
+</div>
+
+<div class="row AnimalCards">
+    @{
+        foreach (Animal animal in ViewBag.Animals)
+        {
+            <div class="card col-md-4 p-0 AnimalCard">
+                <img src="~/images/Animals/@animal.PictureName" class="card-img-top ImgCard" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">@animal.Name</h5>
+                    <p class="card-text">@animal.Category?.Name</p>
+                    <p class="card-text">@animal.Description</p>
+                    @{
+                        if (animal.Comments!.Count>3)
+                        {
+                            @await Html.PartialAsync("_CommentsPartialView", animal.Comments.Take(3))
+                            <div class="list-group">
+                                <a class="list-group-item list-group-item-action disabled">More Comments...</a>
+                            </div>
+                        }
+
+                        else
+                         @await Html.PartialAsync("_CommentsPartialView", animal.Comments)
+                     }
+                </div>
+                <div class="card-footer">
+                    <a asp-action="AnimalPage" asp-route-id="@animal.AnimalId" class="btn btn-primary m-1 ">Details</a>
+                </div>
+            </div>
+        }
+    }
+</div>

@@ -1,0 +1,46 @@
+﻿@model Pet_Shop_Application.Services.IPetShopRepository;
+@{
+    ViewBag.Title = "AnimalPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container mt-4">
+    <h2>Animal Details</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-4">Name:</dt>
+                <dd class="col-sm-8">@ViewBag.Animal.Name</dd>
+
+                <dt class="col-sm-4">Age:</dt>
+                <dd class="col-sm-8">@ViewBag.Animal.Age</dd>
+
+                <dt class="col-sm-4">Category:</dt>
+                <dd class="col-sm-8">@ViewBag.Animal.Category?.Name</dd>
+            </dl>
+            
+            <div>
+                @await Html.PartialAsync("_CommentsPartialView", (ICollection<Comment>)ViewBag.Animal.Comments)
+                <form method="post" asp-action="NewComment" id="commentForm">
+                    <input type="hidden" name="id" value="@ViewBag.Animal.AnimalId" />
+                    <textarea maxlength="100" class="w-100" name="text" id="text"></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <img src="~/images/Animals/@ViewBag.Animal.PictureName" class="card-img-top border border-3 rounded" alt="Animal Picture" style="width: 16rem;height:16rem;   />
+                <div class="card-body">
+                    <h5 class="card-title">Description</h5>
+                    <p class="card-text">@ViewBag.Animal.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

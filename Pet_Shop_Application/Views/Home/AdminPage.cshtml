@@ -1,0 +1,78 @@
+﻿@model Pet_Shop_Application.Services.IPetShopRepository;
+@{
+    ViewBag.Title = "AdminPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Admin Page</h1>
+<div class="row g-0">
+    <div class="col-6 text-end">
+        @await Html.PartialAsync("_CategoriesPartialView")
+    </div>
+    <div class="col-6 ">
+        <a asp-action="AddNewAnimalPage" class="btn btn-primary m-2">Add New Animal</a>
+    </div>
+</div>
+
+@foreach (Animal animal in ViewBag.Animal)
+{
+    <div class="card mb-3 ">
+        <div class="row g-0">
+            <div class="col-xxl-2 col-xl-3  col-lg-4 col-md-5 col-sm-6">
+                <img src="~/images/Animals/@animal.PictureName" class="img-fluid rounded-start adminImgCard" alt="">
+            </div>
+            <div class="col-xxl-10 col-xl-9  col-lg-8 col-md-7 col-sm-6 d-flex ">
+                    <div class="card-body">
+                    <h5 class="card-title"><strong>@animal.Name</strong></h5>
+                    <p class="card-text">@animal.Category?.Name</p>
+                    <p class="card-text">@animal.Description</p>
+                    @await Html.PartialAsync("_CommentsPartialView", animal.Comments)  
+                    </div>
+                                  
+            </div>
+            <div class="card-footer">
+                <div class="btn-group align-bottom d-flex m-1 float-end" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-animalid="@animal.AnimalId">Delete</button>
+                    <a asp-action="EditAnimalPage" asp-route-id="@animal.AnimalId" class="btn btn-warning">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteModalLabel">Delete Confirmation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this animal ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                
+                <button type="button" class="btn btn-primary" id="deleteAnimalBtn">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var animalId = button.data('animalid');
+            var modal = $(this);
+            modal.find('.modal-footer button#deleteAnimalBtn').data('animalid', animalId);
+        });
+
+        $('#deleteAnimalBtn').click(function () {
+            var animalId = $(this).data('animalid');
+            window.location.href = '/Home/DeleteAnimal/' + animalId; // Replace 'ControllerName' with your actual controller name
+        });
+    });
+
+</script>

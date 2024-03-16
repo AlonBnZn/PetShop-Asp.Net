@@ -1,0 +1,51 @@
+﻿@model Animal;
+@{
+    ViewBag.Title = "AddNewAnimalPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Add New Animal</h1>
+
+<div class="container">
+    <h2>Add Animal</h2>
+    <form asp-action="AddAnimal"  method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="AnimalId" />
+
+        <div class="form-group">
+            <label asp-for="Name" class="control-label">Name:</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Age" class="control-label">Age:</label>
+            <input asp-for="Age" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Photo" class="control-label">Picture:</label>
+            <input name="Photo" id="photoInput" type="file" class="form-control" accept="image/*" data-val="true" data-val-required="Please select a file." />
+            <small class="field-validation-valid" data-valmsg-for="Photo" data-valmsg-replace="true" style="color: red;"></small>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="Description" class="control-label">Description:</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label">Category</label>
+            <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "Name"))" class="form-control">
+                <option value="">Select Category</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
